@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bright Web / Untitled UI — Complete UI Kit Showcase v3.9 (Pure Monochrome)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="prototype_system.css">
+  <style>
+    .uui-subnav-bar {
+      position: sticky;
+      top: 44px;
+      z-index: 100;
+      background: var(--color-canvas);
+      border-bottom: 1px solid var(--color-border-subtle);
+      padding: var(--space-3) var(--space-6);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      overflow-x: auto;
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .uui-subnav-btn {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-tertiary);
+      text-decoration: none;
+      white-space: nowrap;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--uui-radius-full);
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border-subtle);
+      transition: all var(--transition-fast);
+    }
+    .uui-subnav-btn:hover {
+      color: var(--color-text-primary);
+      border-color: var(--color-border-hover);
+    }
+    .uui-mockup-screen {
+      background: var(--color-bg-subtle);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--uui-radius-xl);
+      padding: var(--space-5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 0;
+    }
+    .uui-mac-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .uui-mac-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: var(--uui-radius-full);
+      background: var(--color-border-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP ANNOUNCEMENT BAR (THEME-SAFE)
+       ======================================================================== -->
+  <aside class="uui-announcement-bar">
+    <span><strong>Untitled UI Studio OS v3.9</strong> — 100% Pure Monochrome Gray 25–950 • Infinite Marquee & Variables</span>
+    <a href="#cat-hero" style="color: var(--color-surface-dark-text); text-decoration: underline; font-weight: 700;">System Overview →</a>
+  </aside>
+
+  <!-- ========================================================================
+       0. TOP SPEC CONTROL BAR (SIMULATOR & THEME)
+       ======================================================================== -->
+  <header class="prototype-spec-bar">
+    <div class="spec-info">
+      <span class="spec-badge">
+        <span class="spec-status-dot"></span>
+        Untitled UI • Pure Monochrome Edition v3.9
+      </span>
+    </div>
+
+    <div class="spec-controls">
+      <div class="device-switcher">
+        <button class="spec-btn active" id="viewDesktopBtn" onclick="setViewMode('desktop')">Desktop</button>
+        <button class="spec-btn" id="viewMobileBtn" onclick="setViewMode('mobile')">Mobile (390px)</button>
+      </div>
+
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Theme">
+        <svg id="themeIconSun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="themeIconMoon" style="display:none;" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- QUICK ANCHOR SUBNAV -->
+  <nav class="uui-subnav-bar">
+    <a href="#cat-hero" class="uui-subnav-btn">1. Hero Sections (5 Variations)</a>
+    <a href="#cat-trust" class="uui-subnav-btn">2. Trust & Social Proof (5 Blocks)</a>
+    <a href="#cat-positioning" class="uui-subnav-btn">3. Problem & Positioning (4 Blocks)</a>
+    <a href="#cat-features" class="uui-subnav-btn">4. Features, Bento & Sliders (6 Blocks)</a>
+    <a href="#cat-process" class="uui-subnav-btn">5. Process & Timeline (3 Blocks)</a>
+    <a href="#cat-portfolio" class="uui-subnav-btn">6. Cases & Gallery (3 Blocks)</a>
+    <a href="#cat-pricing" class="uui-subnav-btn">7. Pricing & Comparison (4 Blocks)</a>
+    <a href="#cat-objections" class="uui-subnav-btn">8. FAQ & Guarantees (3 Blocks)</a>
+    <a href="#cat-conversion" class="uui-subnav-btn">9. CTA, Quiz & Booking (4 Blocks)</a>
+    <a href="#cat-navigation" class="uui-subnav-btn">10. Navbar & Footer (2 Blocks)</a>
+  </nav>
+
+  <main class="uui-page-wrap" style="padding-top: var(--space-8);">
+
+    <!-- ========================================================================
+         1. HERO SECTIONS (5 VARIATIONS)
+         ======================================================================== -->
+    <section id="cat-hero">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 01 / Hero Sections</span>
+        <h2 class="uui-section-title">Hero Sections (5 Variations)</h2>
+        <p class="uui-section-desc">Conversion-focused layouts for B2B landing pages, SaaS platforms, and digital agencies.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- Hero 1: Split Left -->
+        <div class="uui-card">
+          <span class="uui-text-caption">1.1 HERO SPLIT LEFT (TEXT LEFT / DASHBOARD PREVIEW RIGHT)</span>
+          <div class="uui-grid-2" style="align-items: center;">
+            <div class="uui-flex-col" style="gap: var(--space-4); align-items: flex-start;">
+              <a href="#" class="uui-badge-group">
+                <span class="uui-badge-pill">NEW</span>
+                <span>AI Studio OS 2026 Engine</span>
+                <svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none;" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <h3 class="uui-heading-h1">Websites Engineered to Convert from Second One</h3>
+              <p class="uui-text-lead">
+                We craft high-converting web interfaces powered by Untitled UI and Webflow that outperform market benchmarks.
+              </p>
+              <div class="uui-flex-row">
+                <button class="uui-btn uui-btn-primary uui-btn-lg">Start Project →</button>
+                <button class="uui-btn uui-btn-secondary uui-btn-lg">View Case Studies</button>
+              </div>
+              <div class="uui-flex-row" style="gap: var(--space-4); font-size: var(--font-size-xs); color: var(--color-text-tertiary);">
+                <span style="display:flex; align-items:center; gap:4px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  7-day launch
+                </span>
+                <span style="display:flex; align-items:center; gap:4px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  Free UX audit
+                </span>
+                <span style="display:flex; align-items:center; gap:4px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  100% SLA guarantee
+                </span>
+              </div>
+            </div>
+
+            <!-- Polished SaaS Analytics Card -->
+            <div class="uui-mockup-screen">
+              <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border-subtle); padding-bottom: var(--space-3);">
+                <div class="uui-mac-dots">
+                  <div class="uui-mac-dot"></div>
+                  <div class="uui-mac-dot"></div>
+                  <div class="uui-mac-dot"></div>
+                </div>
+                <span class="uui-text-mono" style="font-size: 11px;">studio.brightweb.ai/analytics</span>
+                <span class="uui-badge uui-badge-dark uui-badge-sm">Live Feed</span>
+              </div>
+              <div class="uui-grid-2" style="gap: var(--space-3);">
+                <div style="background: var(--color-bg-card); padding: var(--space-4); border-radius: var(--uui-radius-lg); border: 1px solid var(--color-border-subtle);">
+                  <span class="uui-text-caption">MRR GROWTH</span>
+                  <div style="font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight: 800; color: var(--color-text-primary);">,250</div>
+                  <span class="uui-text-caption" style="color: var(--color-text-primary); font-weight: 600;">+28.4% vs last mo.</span>
+                </div>
+                <div style="background: var(--color-bg-card); padding: var(--space-4); border-radius: var(--uui-radius-lg); border: 1px solid var(--color-border-subtle);">
+                  <span class="uui-text-caption">CONVERSION RATE</span>
+                  <div style="font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight: 800; color: var(--color-text-primary);">4.85%</div>
+                  <span class="uui-text-caption" style="color: var(--color-text-primary); font-weight: 600;">Top 5% in industry</span>
+                </div>
+              </div>
+              <div style="background: var(--color-bg-card); border-radius: var(--uui-radius-lg); border: 1px solid var(--color-border-subtle); padding: var(--space-4); display:flex; flex-direction:column; gap: var(--space-2);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="font-size: var(--font-size-xs); color: var(--color-text-primary);">Traffic & Active Sessions</strong>
+                  <span class="uui-text-caption">Last 30 days</span>
+                </div>
+                <svg style="width:100%; height:60px; stroke:var(--color-text-primary); stroke-width:2; fill:none;" viewBox="0 0 300 60">
+                  <path d="M0,50 Q40,10 80,35 T160,15 T240,40 T300,5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 2: Centered SaaS -->
+        <div class="uui-card" style="text-align: center; align-items: center;">
+          <span class="uui-text-caption">1.2 HERO CENTERED SAAS (CENTERED HEADLINE + LARGE DASHBOARD)</span>
+          <a href="#" class="uui-badge-group" style="margin-top: var(--space-2); align-self: center !important;">
+            <span class="uui-badge-pill">RELEASE v3.9</span>
+            <span>Autonomous AI Agents for Modern Agencies</span>
+            <svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none;" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <h2 class="uui-heading-display" style="max-width: 860px; margin: var(--space-2) auto;">
+            Automate 80% of Your Web Studio Workflow
+          </h2>
+          <p class="uui-text-lead" style="max-width: 680px; margin-bottom: var(--space-4);">
+            Unified operating system for client discovery, UX prototyping, content planning, and Webflow development.
+          </p>
+          <div class="uui-flex-row" style="justify-content: center; gap: var(--space-3);">
+            <button class="uui-btn uui-btn-primary uui-btn-lg">Start Free Trial</button>
+            <button class="uui-btn uui-btn-outline uui-btn-lg">Book Product Demo</button>
+          </div>
+          <div class="uui-mockup-screen" style="max-width: 900px; margin-top: var(--space-6); padding: var(--space-8);">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--color-border-subtle); padding-bottom: var(--space-3);">
+              <div class="uui-mac-dots">
+                <div class="uui-mac-dot"></div>
+                <div class="uui-mac-dot"></div>
+                <div class="uui-mac-dot"></div>
+              </div>
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">Bright Web Studio OS • Central Console</strong>
+              <span class="uui-badge uui-badge-dark uui-badge-sm">System v3.9</span>
+            </div>
+            <div class="uui-grid-3" style="margin-top: var(--space-4);">
+              <div class="uui-metric-card" style="padding: var(--space-4); text-align:left;">
+                <span class="uui-text-caption">ACTIVE AGENTS</span>
+                <div style="font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight:800; color: var(--color-text-primary);">32 Online</div>
+              </div>
+              <div class="uui-metric-card" style="padding: var(--space-4); text-align:left;">
+                <span class="uui-text-caption">LATENCY</span>
+                <div style="font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight:800; color: var(--color-text-primary);">1.4 sec</div>
+              </div>
+              <div class="uui-metric-card" style="padding: var(--space-4); text-align:left;">
+                <span class="uui-text-caption">CODE QUALITY</span>
+                <div style="font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight:800; color: var(--color-text-primary);">100% A+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 3: Lead Gen Form Open -->
+        <div class="uui-card">
+          <span class="uui-text-caption">1.3 HERO LEAD GEN FORM (OFFER LEFT / EMBEDDED FORM RIGHT)</span>
+          <div class="uui-grid-2" style="align-items: center;">
+            <div class="uui-flex-col" style="gap: var(--space-4);">
+              <h3 class="uui-heading-h1">Receive a Clickable UX Prototype of Your Website by Tomorrow</h3>
+              <p class="uui-text-body">
+                Fill out the short form on the right, and we will calculate your fixed estimate and assemble your page sitemap.
+              </p>
+              <div class="uui-flex-col" style="gap: var(--space-2); font-size: var(--font-size-sm);">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Complimentary competitive landscape audit</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Guaranteed fixed estimate with zero hidden fees</span>
+                </div>
+              </div>
+            </div>
+            <div class="uui-card-subtle" style="padding: var(--space-6);">
+              <h4 class="uui-heading-h5" style="margin-bottom: var(--space-3);">Calculate Estimate</h4>
+              <div class="uui-flex-col" style="gap: var(--space-3);">
+                <input type="text" class="uui-input" placeholder="Your name">
+                <input type="tel" class="uui-input" placeholder="Phone number (+1...)">
+                <div class="uui-select-wrap">
+                  <select class="uui-select">
+                    <option>Landing Page (Single page)</option>
+                    <option>Corporate Website (5–10 pages)</option>
+                    <option>E-commerce / Portal</option>
+                  </select>
+                  <svg class="uui-select-arrow" style="width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <button class="uui-btn uui-btn-primary uui-btn-md" style="width: 100%;">Get Custom Estimate</button>
+                <span class="uui-text-caption" style="text-align: center;">Response within 15 minutes via Telegram or Email</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 4: Video / Background Style (100% Theme Safe) -->
+        <div class="uui-card-dark" style="text-align: center; padding: var(--space-16) var(--space-6);">
+          <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">1.4 HERO VIDEO / VISUAL BACKGROUND</span>
+          <h2 class="uui-heading-display" style="color: var(--color-surface-dark-text); max-width: 800px; margin: var(--space-4) auto;">
+            Engineering Next-Generation Digital Experiences
+          </h2>
+          <p class="uui-text-lead" style="color: var(--color-surface-dark-subtle); max-width: 600px; margin: 0 auto var(--space-6);">
+            Minimalist monochrome design focusing visitor attention purely on product value.
+          </p>
+          <div class="uui-flex-row" style="justify-content: center;">
+            <button class="uui-btn uui-btn-primary uui-btn-lg">
+              <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Watch Showreel (02:14)
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero 5: Search / Express Calculator -->
+        <div class="uui-card">
+          <span class="uui-text-caption">1.5 HERO SEARCH / EXPRESS CALCULATOR</span>
+          <div style="text-align: center; max-width: 720px; margin: 0 auto; width:100%;">
+            <h2 class="uui-heading-h2">Find the Ideal Solution for Your Business</h2>
+            <p class="uui-text-body" style="margin: var(--space-2) 0 var(--space-5);">Enter your industry niche or select project parameters:</p>
+            <div class="uui-input-group-addon" style="max-width: 600px; margin: 0 auto;">
+              <span class="uui-input-addon uui-input-addon-lead">Search:</span>
+              <input type="text" class="uui-input" placeholder="e.g., SaaS, EdTech, E-commerce, Real Estate...">
+              <button class="uui-btn uui-btn-primary uui-btn-md" style="border-radius: 0 var(--uui-radius-lg) var(--uui-radius-lg) 0;">Search</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         2. TRUST & SOCIAL PROOF (5 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-trust">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 02 / Social Proof</span>
+        <h2 class="uui-section-title">Trust & Verified Social Proof (5 Blocks)</h2>
+        <p class="uui-section-desc">Infinite logo marquees, audited metrics, verified client reviews, video testimonials, and PR awards.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 2.1 Logos Truly Infinite Marquee Ticker -->
+        <div class="uui-card">
+          <span class="uui-text-caption">2.1 INFINITE LOGO MARQUEE (PURE CSS TICKER)</span>
+          <div class="uui-marquee-wrap" style="padding: var(--space-4) 0;">
+            <div class="uui-marquee-track">
+              <div class="uui-marquee-group">
+                <span class="uui-logo-cloud-item">WEBFLOW</span>
+                <span class="uui-logo-cloud-item">FIGMA</span>
+                <span class="uui-logo-cloud-item">LINEAR</span>
+                <span class="uui-logo-cloud-item">NOTION</span>
+                <span class="uui-logo-cloud-item">STRIPE</span>
+                <span class="uui-logo-cloud-item">VERCEL</span>
+              </div>
+              <div class="uui-marquee-group" aria-hidden="true">
+                <span class="uui-logo-cloud-item">WEBFLOW</span>
+                <span class="uui-logo-cloud-item">FIGMA</span>
+                <span class="uui-logo-cloud-item">LINEAR</span>
+                <span class="uui-logo-cloud-item">NOTION</span>
+                <span class="uui-logo-cloud-item">STRIPE</span>
+                <span class="uui-logo-cloud-item">VERCEL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.2 Numbers & Metrics Grid -->
+        <div class="uui-card">
+          <span class="uui-text-caption">2.2 NUMBERS & METRICS GRID (AUDITED IMPACT)</span>
+          <div class="uui-grid-4" style="margin-top: var(--space-2);">
+            <div class="uui-metric-card">
+              <div class="uui-metric-num">M+</div>
+              <strong style="font-size: var(--font-size-sm);">Client Capital Raised</strong>
+              <span class="uui-text-caption">Across Seed & Series A rounds</span>
+            </div>
+            <div class="uui-metric-card">
+              <div class="uui-metric-num">48 Hours</div>
+              <strong style="font-size: var(--font-size-sm);">Prototype Turnaround</strong>
+              <span class="uui-text-caption">Full clickable prototype flow</span>
+            </div>
+            <div class="uui-metric-card">
+              <div class="uui-metric-num">+340%</div>
+              <strong style="font-size: var(--font-size-sm);">Conversion Lift</strong>
+              <span class="uui-text-caption">Driven by AIDA/PASA frameworks</span>
+            </div>
+            <div class="uui-metric-card">
+              <div class="uui-metric-num">99.8%</div>
+              <strong style="font-size: var(--font-size-sm);">Client Satisfaction</strong>
+              <span class="uui-text-caption">150+ completed client projects</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.3 Reviews Grid -->
+        <div class="uui-grid-3">
+          <div class="uui-testimonial-card">
+            <div class="uui-stars-row">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="uui-text-body" style="font-size: var(--font-size-sm);">"Flawless build quality. Not a single responsive bug on mobile devices."</p>
+            <div style="display:flex; align-items:center; gap: var(--space-3);">
+              <div class="uui-avatar uui-avatar-md" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text);">AK</div>
+              <div><strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">Alex Koval</strong><span class="uui-text-caption">Founder, SaaS Platform</span></div>
+            </div>
+          </div>
+
+          <div class="uui-testimonial-card">
+            <div class="uui-stars-row">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="uui-text-body" style="font-size: var(--font-size-sm);">"Thanks to Untitled UI, our landing page looks like a top-tier Silicon Valley product."</p>
+            <div style="display:flex; align-items:center; gap: var(--space-3);">
+              <div class="uui-avatar uui-avatar-md" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text);">MS</div>
+              <div><strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">Marina Savchuk</strong><span class="uui-text-caption">Head of Marketing</span></div>
+            </div>
+          </div>
+
+          <div class="uui-testimonial-card">
+            <div class="uui-stars-row">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="uui-text-body" style="font-size: var(--font-size-sm);">"Saved over 3 weeks in our development cycle. Highly recommended to any founder."</p>
+            <div style="display:flex; align-items:center; gap: var(--space-3);">
+              <div class="uui-avatar uui-avatar-md" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text);">VT</div>
+              <div><strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">Victor Tkachenko</strong><span class="uui-text-caption">CEO, Logistics Tech</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.4 Video Testimonials Cards (100% Theme Safe) -->
+        <div class="uui-card">
+          <span class="uui-text-caption">2.4 VIDEO TESTIMONIALS (WITH PLAY BUTTON)</span>
+          <div class="uui-grid-3">
+            <div class="uui-video-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="uui-badge uui-badge-dark uui-badge-sm" style="background: rgba(255,255,255,0.15); color: var(--color-surface-dark-text); border:none;">01:45 min</span>
+                <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">FinTech Case</span>
+              </div>
+              <div style="display:flex; justify-content:center; align-items:center; margin: var(--space-4) 0;">
+                <div class="uui-play-btn">
+                  <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div>
+                <strong style="display:block; font-size: var(--font-size-sm); color: var(--color-surface-dark-text);">Ivan Melnyk</strong>
+                <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">CEO NovaPay Platform</span>
+              </div>
+            </div>
+
+            <div class="uui-video-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="uui-badge uui-badge-dark uui-badge-sm" style="background: rgba(255,255,255,0.15); color: var(--color-surface-dark-text); border:none;">02:10 min</span>
+                <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">EdTech Case</span>
+              </div>
+              <div style="display:flex; justify-content:center; align-items:center; margin: var(--space-4) 0;">
+                <div class="uui-play-btn">
+                  <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div>
+                <strong style="display:block; font-size: var(--font-size-sm); color: var(--color-surface-dark-text);">Anna Bondar</strong>
+                <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">Co-founder Study Academy</span>
+              </div>
+            </div>
+
+            <div class="uui-video-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="uui-badge uui-badge-dark uui-badge-sm" style="background: rgba(255,255,255,0.15); color: var(--color-surface-dark-text); border:none;">01:20 min</span>
+                <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">AI Platform</span>
+              </div>
+              <div style="display:flex; justify-content:center; align-items:center; margin: var(--space-4) 0;">
+                <div class="uui-play-btn">
+                  <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+              <div>
+                <strong style="display:block; font-size: var(--font-size-sm); color: var(--color-surface-dark-text);">Dmytro Shevchenko</strong>
+                <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">CTO NeuroFlow Lab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.5 Featured In / PR (Clean Spacing) -->
+        <div class="uui-card">
+          <span class="uui-text-caption">2.5 FEATURED IN & RECOGNITION (PRESS / PR)</span>
+          <div class="uui-grid-4" style="margin-top: var(--space-2);">
+            <div class="uui-media-card">
+              <span class="uui-media-brand">FORBES TECH</span>
+              <span class="uui-text-caption">Top 10 No-Code Studios 2026</span>
+            </div>
+            <div class="uui-media-card">
+              <span class="uui-media-brand">PRODUCT HUNT</span>
+              <span class="uui-text-caption">#1 Product of the Day</span>
+            </div>
+            <div class="uui-media-card">
+              <span class="uui-media-brand">WEBFLOW AWARDS</span>
+              <span class="uui-text-caption">Best Enterprise Architecture</span>
+            </div>
+            <div class="uui-media-card">
+              <span class="uui-media-brand">AWWWARDS</span>
+              <span class="uui-text-caption">Site of the Day Winner</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. PROBLEM, SOLUTION & POSITIONING (4 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-positioning">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 03 / Positioning</span>
+        <h2 class="uui-section-title">Problem, Solution & Target Audience</h2>
+        <p class="uui-section-desc">Before/After comparison, brand manifesto, ICP segmentation, and high-level engagement architecture.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 3.1 Pain Points (Before/After) -->
+        <div class="uui-card">
+          <span class="uui-text-caption">3.1 BEFORE / AFTER (PROBLEM VS. SYSTEM SOLUTION)</span>
+          <div class="uui-grid-2" style="margin-top: var(--space-2);">
+            <div class="uui-card-subtle" style="border-left: 4px solid var(--color-border-hover);">
+              <strong style="font-size: var(--font-size-base); color: var(--color-text-primary); display:block; margin-bottom: var(--space-3);">Standard Agency Approach (Problem):</strong>
+              <ul class="uui-flex-col" style="gap: var(--space-2); font-size: var(--font-size-sm); list-style: none;">
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-tertiary);stroke-width:2;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>Development drags on for 2–3 months with delays</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-tertiary);stroke-width:2;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>Designer and developer argue constantly over revisions</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-tertiary);stroke-width:2;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>No unified design system, layouts break on mobile</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-tertiary);stroke-width:2;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>Project budget doubles unexpectedly midway through</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="uui-card-subtle" style="border-left: 4px solid var(--color-border-strong);">
+              <strong style="font-size: var(--font-size-base); color: var(--color-text-primary); display:block; margin-bottom: var(--space-3);">With Bright Web Studio OS:</strong>
+              <ul class="uui-flex-col" style="gap: var(--space-2); font-size: var(--font-size-sm); list-style: none;">
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Ready clickable prototype within 48 hours</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>100% strict Untitled UI token architecture</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Flawless mobile responsiveness & Client-First standard</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:8px;">
+                  <svg style="width:16px;height:16px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Guaranteed fixed pricing & transparent milestone updates</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.2 Value Proposition Statement (100% Theme Safe) -->
+        <div class="uui-card-dark" style="text-align: center; padding: var(--space-12) var(--space-8);">
+          <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">3.2 VALUE PROPOSITION STATEMENT</span>
+          <h2 class="uui-heading-display" style="color: var(--color-surface-dark-text); max-width: 860px; margin: var(--space-4) auto;">
+            "We don't merely draw web pages. We engineer predictable customer acquisition engines for ambitious businesses."
+          </h2>
+          <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">— Bright Web Studio OS Manifesto</span>
+        </div>
+
+        <!-- 3.3 Target Audience Segments -->
+        <div class="uui-card">
+          <span class="uui-text-caption">3.3 TARGET AUDIENCE SEGMENTS (WHO THIS IS FOR)</span>
+          <div class="uui-grid-3" style="margin-top: var(--space-2);">
+            <div class="uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Segment 01</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">Startups & SaaS</h4>
+              <p class="uui-text-caption">Rapid MVP launch and landing page to test demand and pitch venture investors.</p>
+            </div>
+            <div class="uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Segment 02</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">Digital & Service Agencies</h4>
+              <p class="uui-text-caption">Modernize legacy website, raise average deal size, and automate lead intake.</p>
+            </div>
+            <div class="uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Segment 03</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">Enterprise Companies</h4>
+              <p class="uui-text-caption">Scalable Webflow CMS architecture eliminating reliance on external engineering bottlenecks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.4 How It Works High-Level -->
+        <div class="uui-card">
+          <span class="uui-text-caption">3.4 HOW IT WORKS (HIGH-LEVEL ARCHITECTURE)</span>
+          <div class="uui-grid-4" style="text-align: center; margin-top: var(--space-2);">
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block;">1. Brief & Discovery</strong>
+              <p class="uui-text-caption" style="margin-top:4px;">Asset audit & ICP analysis</p>
+            </div>
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block;">2. UX Architecture</strong>
+              <p class="uui-text-caption" style="margin-top:4px;">Wireframing & Copy Deck</p>
+            </div>
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block;">3. UI & Webflow</strong>
+              <p class="uui-text-caption" style="margin-top:4px;">Semantic dev & tokens</p>
+            </div>
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block;">4. Conversion Lift</strong>
+              <p class="uui-text-caption" style="margin-top:4px;">Production release & QA</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. FEATURES, CAPABILITIES & SLIDERS (6 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-features">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 04 / Capabilities</span>
+        <h2 class="uui-section-title">Features, Bento Grids & Sliders</h2>
+        <p class="uui-section-desc">3-column grids, alternating zig-zag blocks, interactive tabs, and touch-scroll carousels.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 4.1 Features 3-Column Grid -->
+        <div class="uui-card">
+          <span class="uui-text-caption">4.1 CLASSIC 3-COLUMN GRID (FEATURES 3-COL GRID)</span>
+          <div class="uui-grid-3" style="margin-top: var(--space-2);">
+            <div class="uui-card-subtle">
+              <div class="uui-icon-box uui-icon-box-dark">
+                <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h4 class="uui-heading-h6" style="margin: var(--space-2) 0;">Blazing Load Speed</h4>
+              <p class="uui-text-caption">Pure CSS without heavy runtime libraries guarantees 99+ on Google PageSpeed.</p>
+            </div>
+
+            <div class="uui-card-subtle">
+              <div class="uui-icon-box uui-icon-box-dark">
+                <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h4 class="uui-heading-h6" style="margin: var(--space-2) 0;">Enterprise Security</h4>
+              <p class="uui-text-caption">All forms, webhooks, and integrations run on encrypted enterprise SSL standards.</p>
+            </div>
+
+            <div class="uui-card-subtle">
+              <div class="uui-icon-box uui-icon-box-dark">
+                <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h4 class="uui-heading-h6" style="margin: var(--space-2) 0;">Mobile-First Architecture</h4>
+              <p class="uui-text-caption">Pixel-perfect responsive fidelity across devices from 320px to 4K displays.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2 Feature Zig-Zag Alternating -->
+        <div class="uui-card">
+          <span class="uui-text-caption">4.2 ALTERNATING ZIG-ZAG FEATURE BLOCKS</span>
+          <div class="uui-flex-col" style="gap: var(--space-6); margin-top: var(--space-2);">
+            <!-- Row 1: Text Left, Mockup Right -->
+            <div class="uui-grid-2" style="align-items: center;">
+              <div class="uui-flex-col" style="gap: var(--space-3); align-items: flex-start;">
+                <span class="uui-badge uui-badge-dark uui-badge-sm">Modularity</span>
+                <h3 class="uui-heading-h3">Assemble Pages Like Modular Lego Blocks</h3>
+                <p class="uui-text-body">Every component is self-contained and snaps seamlessly to any conversion goal.</p>
+              </div>
+              <div class="uui-mockup-screen">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div class="uui-mac-dots">
+                    <div class="uui-mac-dot"></div>
+                    <div class="uui-mac-dot"></div>
+                    <div class="uui-mac-dot"></div>
+                  </div>
+                  <span class="uui-badge uui-badge-dark uui-badge-sm">UI Blocks</span>
+                </div>
+                <div style="background: var(--color-bg-card); padding: var(--space-3); border-radius: var(--uui-radius-md); border: 1px solid var(--color-border-subtle); display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size: var(--font-size-xs); font-weight:600; color: var(--color-text-primary);">Hero Section Split</span>
+                  <span class="uui-badge uui-badge-gray uui-badge-sm">Active</span>
+                </div>
+                <div style="background: var(--color-bg-card); padding: var(--space-3); border-radius: var(--uui-radius-md); border: 1px solid var(--color-border-subtle); display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size: var(--font-size-xs); font-weight:600; color: var(--color-text-primary);">Pricing Tiers (Annual)</span>
+                  <span class="uui-badge uui-badge-gray uui-badge-sm">Active</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Mockup Left, Text Right -->
+            <div class="uui-grid-2" style="align-items: center;">
+              <div class="uui-mockup-screen">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div class="uui-mac-dots">
+                    <div class="uui-mac-dot"></div>
+                    <div class="uui-mac-dot"></div>
+                    <div class="uui-mac-dot"></div>
+                  </div>
+                  <span class="uui-text-mono" style="font-size: 11px;">theme_tokens.css</span>
+                </div>
+                <div style="background: var(--color-surface-dark); color: var(--color-surface-dark-text); padding: var(--space-3); border-radius: var(--uui-radius-md); font-family: var(--font-mono); font-size: 11px;">
+                  <div>--color-canvas: var(--gray-50);</div>
+                  <div>--uui-radius-xl: 16px;</div>
+                  <div>--font-heading: 'Plus Jakarta Sans';</div>
+                </div>
+              </div>
+              <div class="uui-flex-col" style="gap: var(--space-3); align-items: flex-start;">
+                <span class="uui-badge uui-badge-dark uui-badge-sm">Tokenization</span>
+                <h3 class="uui-heading-h3">Instant Theme & Token Swapping</h3>
+                <p class="uui-text-body">Adjust a few design tokens in CSS to update typography, radii, and palette sitewide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.3 Bento Grid -->
+        <div class="uui-grid-3" style="margin-top: var(--space-2);">
+          <div class="uui-card-subtle" style="grid-column: span 2;">
+            <span class="uui-badge uui-badge-dark uui-badge-sm">Flagship Advantage</span>
+            <h3 class="uui-heading-h4" style="margin: var(--space-2) 0;">Client-First Webflow Architecture</h3>
+            <p class="uui-text-body">Organized, clean class naming accessible to both marketers and engineers.</p>
+          </div>
+          <div class="uui-card-subtle">
+            <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">AI Studio OS</strong>
+            <p class="uui-text-caption" style="margin-top: var(--space-2);">30+ autonomous operational agents.</p>
+          </div>
+          <div class="uui-card-subtle">
+            <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">Zero-Dependency Code</strong>
+            <p class="uui-text-caption" style="margin-top: var(--space-2);">Vanilla semantic web standards.</p>
+          </div>
+          <div class="uui-card-subtle" style="grid-column: span 2;">
+            <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary);">24/7 Dedicated Support</strong>
+            <p class="uui-text-caption" style="margin-top: var(--space-2);">Direct Telegram channel with lead engineer.</p>
+          </div>
+        </div>
+
+        <!-- 4.4 Interactive Tabs Feature -->
+        <div class="uui-card">
+          <span class="uui-text-caption">4.4 INTERACTIVE FEATURE TABS (DYNAMIC CONTENT)</span>
+          <div class="uui-tabs-pill" style="margin: var(--space-3) 0;">
+            <button class="uui-tab-pill-btn active" onclick="switchTab(0)">Design System</button>
+            <button class="uui-tab-pill-btn" onclick="switchTab(1)">Webflow Build</button>
+            <button class="uui-tab-pill-btn" onclick="switchTab(2)">SEO & Analytics</button>
+          </div>
+          <div id="tabContent0" class="uui-card-subtle">
+            <h4 class="uui-heading-h5">Untitled UI Token Engine</h4>
+            <p class="uui-text-body">Complete system of inputs, buttons, cards, and forms with zero bloated dependencies.</p>
+          </div>
+          <div id="tabContent1" class="uui-card-subtle" style="display:none;">
+            <h4 class="uui-heading-h5">Semantic Webflow Client-First Build</h4>
+            <p class="uui-text-body">Effortless client workspace handover and hassle-free editing via Webflow Editor.</p>
+          </div>
+          <div id="tabContent2" class="uui-card-subtle" style="display:none;">
+            <h4 class="uui-heading-h5">Technical SEO & Event Tracking</h4>
+            <p class="uui-text-body">Strict heading hierarchies, OpenGraph tags, sitemaps, and custom GA4 conversions.</p>
+          </div>
+        </div>
+
+        <!-- 4.5 Interactive Horizontal Carousel / Slider -->
+        <div class="uui-card">
+          <span class="uui-text-caption">4.5 HORIZONTAL CAROUSEL (TOUCH-SCROLL SLIDER)</span>
+          <div class="uui-carousel" style="margin-top: var(--space-3);">
+            <div class="uui-carousel-item uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Slide 01</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">AIDA & PASA Frameworks</h4>
+              <p class="uui-text-caption">Battle-tested persuasion flows validated across dozens of real paid campaigns.</p>
+            </div>
+            <div class="uui-carousel-item uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Slide 02</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">390px Mobile Simulator</h4>
+              <p class="uui-text-caption">Instant viewport testing directly in-browser without touching DevTools.</p>
+            </div>
+            <div class="uui-carousel-item uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Slide 03</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">Zero Emoji Standard</h4>
+              <p class="uui-text-caption">Clean geometric SVG icons without amateurish generic emojis.</p>
+            </div>
+            <div class="uui-carousel-item uui-card-subtle">
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Slide 04</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">100% CSS Variables</h4>
+              <p class="uui-text-caption">Full token parametrization for pain-free long-term maintenance.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. PROCESS & WORKFLOW (3 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-process">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 05 / Process</span>
+        <h2 class="uui-section-title">Project Milestones & Timeline</h2>
+        <p class="uui-section-desc">Numbered 1-2-3-4 step progress, vertical roadmap, and interactive disclosure cards.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 5.1 Numbered Steps -->
+        <div class="uui-card">
+          <span class="uui-text-caption">5.1 LINEAR PROGRESS BAR (NUMBERED 1-2-3-4 STEPS)</span>
+          <div class="uui-stepper" style="margin-top: var(--space-3);">
+            <div class="uui-step-item completed">
+              <div class="uui-step-circle">
+                <svg style="width:16px;height:16px;stroke:currentColor;stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="uui-step-label"><span class="uui-step-title">1. Brief</span><span class="uui-step-desc">24 hours</span></div>
+            </div>
+            <div class="uui-step-item active">
+              <div class="uui-step-circle">2</div>
+              <div class="uui-step-label"><span class="uui-step-title">2. Prototype</span><span class="uui-step-desc">48 Hours</span></div>
+            </div>
+            <div class="uui-step-item">
+              <div class="uui-step-circle">3</div>
+              <div class="uui-step-label"><span class="uui-step-title">3. Development</span><span class="uui-step-desc">3–5 days</span></div>
+            </div>
+            <div class="uui-step-item">
+              <div class="uui-step-circle">4</div>
+              <div class="uui-step-label"><span class="uui-step-title">4. Launch</span><span class="uui-step-desc">Release</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.2 Vertical Roadmap Timeline -->
+        <div class="uui-card">
+          <span class="uui-text-caption">5.2 VERTICAL ROADMAP (TIMELINE)</span>
+          <div class="uui-flex-col" style="gap: var(--space-4); margin-top: var(--space-2); border-left: 2px solid var(--color-border-subtle); padding-left: var(--space-5);">
+            <div>
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Stage 01</span>
+              <h4 class="uui-heading-h6" style="margin: var(--space-1) 0;">Discovery Interview & Offer Engineering</h4>
+              <p class="uui-text-caption">Isolate authentic differentiators and map core customer objections.</p>
+            </div>
+            <div>
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Stage 02</span>
+              <h4 class="uui-heading-h6" style="margin: var(--space-1) 0;">Monochrome UX Wireframing</h4>
+              <p class="uui-text-caption">Validating conversion architecture and copy without color distraction.</p>
+            </div>
+            <div>
+              <span class="uui-badge uui-badge-dark uui-badge-sm">Stage 03</span>
+              <h4 class="uui-heading-h6" style="margin: var(--space-1) 0;">Webflow Development & Production Go-Live</h4>
+              <p class="uui-text-caption">Connecting analytics, domain DNS, lead routing, and project handover.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. CASE STUDIES & PORTFOLIO (3 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-portfolio">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 06 / Portfolio</span>
+        <h2 class="uui-section-title">Case Studies & Visual Showcase</h2>
+        <p class="uui-section-desc">Project cards with hard metrics, narrative deep-dive breakdown, and visual work grid.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 6.1 Case Studies Cards -->
+        <div class="uui-card">
+          <span class="uui-text-caption">6.1 METRIC-DRIVEN CASE CARDS</span>
+          <div class="uui-grid-3" style="margin-top: var(--space-2);">
+            <div class="uui-card-subtle">
+              <div class="uui-mockup-screen" style="height: 140px; justify-content:center; align-items:center;"><strong style="color: var(--color-text-primary);">Nova Logic</strong></div>
+              <span class="uui-badge uui-badge-dark uui-badge-sm" style="margin-top: var(--space-3);">SaaS Platform</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">Conversion Lift by +180%</h4>
+              <p class="uui-text-caption">Complete overhaul using Untitled UI standards and Webflow CMS migration.</p>
+            </div>
+
+            <div class="uui-card-subtle">
+              <div class="uui-mockup-screen" style="height: 140px; justify-content:center; align-items:center;"><strong style="color: var(--color-text-primary);">FlowCraft Lab</strong></div>
+              <span class="uui-badge uui-badge-dark uui-badge-sm" style="margin-top: var(--space-3);">FinTech</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">$3.2M Capital Raised</h4>
+              <p class="uui-text-caption">Strategic pitch landing page and investor portal for Series A fundraising.</p>
+            </div>
+
+            <div class="uui-card-subtle">
+              <div class="uui-mockup-screen" style="height: 140px; justify-content:center; align-items:center;"><strong style="color: var(--color-text-primary);">Apex Solar</strong></div>
+              <span class="uui-badge uui-badge-dark uui-badge-sm" style="margin-top: var(--space-3);">Green Energy</span>
+              <h4 class="uui-heading-h5" style="margin: var(--space-2) 0;">1,400+ Inquiries in Month 1</h4>
+              <p class="uui-text-caption">Custom solar energy ROI calculator with automated Webflow CRM routing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6.2 Case Study Deep-Dive (Theme-Safe) -->
+        <div class="uui-card-dark" style="padding: var(--space-10);">
+          <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">6.2 FLAGSHIP CASE DEEP-DIVE (CHALLENGE ➔ SOLUTION ➔ RESULT)</span>
+          <div class="uui-grid-3" style="margin-top: var(--space-6);">
+            <div>
+              <strong style="color: var(--color-surface-dark-text); font-size: var(--font-size-md);">1. Client Challenge:</strong>
+              <p class="uui-text-caption" style="color: var(--color-surface-dark-subtle); margin-top: var(--space-2);">
+                Legacy site experienced a 74% bounce rate due to slow load times and vague positioning.
+              </p>
+            </div>
+            <div>
+              <strong style="color: var(--color-surface-dark-text); font-size: var(--font-size-md);">2. Delivered Solution:</strong>
+              <p class="uui-text-caption" style="color: var(--color-surface-dark-subtle); margin-top: var(--space-2);">
+                Re-architected flow using PASA framework, embedded instant calculator, and built on Webflow.
+              </p>
+            </div>
+            <div>
+              <strong style="color: var(--color-surface-dark-text); font-size: var(--font-size-md);">3. Measurable Outcome:</strong>
+              <p class="uui-text-caption" style="color: var(--color-surface-dark-subtle); margin-top: var(--space-2);">
+                Average session duration tripled; customer acquisition cost dropped by 42%.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6.3 Visual Gallery -->
+        <div class="uui-card">
+          <span class="uui-text-caption">6.3 VISUAL PROJECT GALLERY</span>
+          <div class="uui-gallery-grid" style="margin-top: var(--space-2);">
+            <div class="uui-gallery-item"><strong style="color: var(--color-text-primary);">E-Commerce UI</strong><span class="uui-text-caption">Webflow Shop</span></div>
+            <div class="uui-gallery-item"><strong style="color: var(--color-text-primary);">SaaS Portal</strong><span class="uui-text-caption">Dashboard UI</span></div>
+            <div class="uui-gallery-item"><strong style="color: var(--color-text-primary);">FinTech Mobile</strong><span class="uui-text-caption">App Landing</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. PRICING & TIERS (4 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-pricing">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 07 / Pricing</span>
+        <h2 class="uui-section-title">Pricing Packages & Comparison</h2>
+        <p class="uui-section-desc">3-tier cards, billing period toggle, feature matrix, and enterprise engagement terms.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 7.1 Tiered Pricing with Toggle -->
+        <div class="uui-card">
+          <span class="uui-text-caption">7.1 TIERED PRICING WITH BILLING TOGGLE</span>
+          <div style="text-align: center; margin: var(--space-2) 0 var(--space-6);">
+            <div class="uui-btn-group">
+              <button class="uui-btn uui-btn-secondary uui-btn-sm" id="btnMonthly" onclick="setBilling('monthly')">Monthly</button>
+              <button class="uui-btn uui-btn-secondary uui-btn-sm active" id="btnAnnual" onclick="setBilling('annual')" style="background: var(--color-bg-subtle); font-weight:700;">Annual (-20%)</button>
+            </div>
+          </div>
+
+          <div class="uui-grid-3">
+            <div class="uui-card-subtle">
+              <span class="uui-text-caption">STARTER</span>
+              <div style="display:flex; align-items:baseline; gap:4px; margin: var(--space-2) 0;">
+                <span class="uui-heading-h2" id="priceStarter" style="color: var(--color-text-primary);">,200</span>
+              </div>
+              <p class="uui-text-caption">Fast-track launch for early-stage products.</p>
+              <hr class="uui-divider">
+              <ul style="font-size: var(--font-size-xs); list-style: none; display:flex; flex-direction:column; gap:8px;">
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Landing page up to 5 sections</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>100% responsive mobile layout</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>7 business days turnaround</span>
+                </li>
+              </ul>
+              <button class="uui-btn uui-btn-secondary uui-btn-md" style="width: 100%; margin-top: var(--space-4);">Select Starter</button>
+            </div>
+
+            <div class="uui-card-subtle" style="border: 2px solid var(--color-border-strong); position: relative;">
+              <span class="uui-badge uui-badge-dark uui-badge-sm" style="position: absolute; top: -10px; right: 16px;">POPULAR CHOICE</span>
+              <span class="uui-text-caption">GROWTH PRO</span>
+              <div style="display:flex; align-items:baseline; gap:4px; margin: var(--space-2) 0;">
+                <span class="uui-heading-h2" id="priceGrowth" style="color: var(--color-text-primary);">,800</span>
+              </div>
+              <p class="uui-text-caption">Engineered for scaling commercial businesses.</p>
+              <hr class="uui-divider">
+              <ul style="font-size: var(--font-size-xs); list-style: none; display:flex; flex-direction:column; gap:8px;">
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Up to 10 pages + Webflow CMS</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Custom interactive calculators & quizzes</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Priority 10-day deployment</span>
+                </li>
+              </ul>
+              <button class="uui-btn uui-btn-primary uui-btn-md" style="width: 100%; margin-top: var(--space-4);">Select Growth</button>
+            </div>
+
+            <div class="uui-card-subtle">
+              <span class="uui-text-caption">ENTERPRISE</span>
+              <div style="display:flex; align-items:baseline; gap:4px; margin: var(--space-2) 0;">
+                <span class="uui-heading-h2" id="priceEnterprise" style="color: var(--color-text-primary);">,500</span>
+              </div>
+              <p class="uui-text-caption">Comprehensive systems for established ecosystems.</p>
+              <hr class="uui-divider">
+              <ul style="font-size: var(--font-size-xs); list-style: none; display:flex; flex-direction:column; gap:8px;">
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Unlimited pages & CRM integrations</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Dedicated technical lead & account manager</span>
+                </li>
+                <li style="display:flex; align-items:center; gap:6px;">
+                  <svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>99.9% SLA & 24/7 priority support</span>
+                </li>
+              </ul>
+              <button class="uui-btn uui-btn-secondary uui-btn-md" style="width: 100%; margin-top: var(--space-4);">Contact Enterprise</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7.2 Detailed Feature Comparison Table -->
+        <div class="uui-card">
+          <span class="uui-text-caption">7.2 DETAILED COMPARISON MATRIX</span>
+          <div class="uui-table-wrap" style="margin-top: var(--space-2);">
+            <table class="uui-table">
+              <thead>
+                <tr>
+                  <th>Feature Capability</th>
+                  <th>Starter</th>
+                  <th>Growth Pro</th>
+                  <th>Enterprise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Number of pages</td>
+                  <td>1–5</td>
+                  <td>Up to 12</td>
+                  <td>Unlimited</td>
+                </tr>
+                <tr>
+                  <td>Webflow CMS Base</td>
+                  <td>—</td>
+                  <td><span style="display:inline-flex; align-items:center; gap:4px;"><svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Included</span></td>
+                  <td><span style="display:inline-flex; align-items:center; gap:4px;"><svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Included</span></td>
+                </tr>
+                <tr>
+                  <td>Calculators & Quizzes</td>
+                  <td>—</td>
+                  <td><span style="display:inline-flex; align-items:center; gap:4px;"><svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Included</span></td>
+                  <td><span style="display:inline-flex; align-items:center; gap:4px;"><svg style="width:14px;height:14px;stroke:var(--color-text-primary);stroke-width:2.5;fill:none;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Included</span></td>
+                </tr>
+                <tr>
+                  <td>Delivery Timeline</td>
+                  <td>7 days</td>
+                  <td>10 days</td>
+                  <td>From 14 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. OBJECTION HANDLING & CREDIBILITY (3 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-objections">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 08 / Trust & FAQ</span>
+        <h2 class="uui-section-title">Objection Handling, Guarantees & Team</h2>
+        <p class="uui-section-desc">Accordion resolving buyer friction, clear guarantee policies, and team credentials.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 8.1 Accordion FAQ -->
+        <div class="uui-card">
+          <span class="uui-text-caption">8.1 ACCORDION FAQ (STRATEGIC OBJECTIONS)</span>
+          <div class="uui-flex-col" style="gap: var(--space-3); margin-top: var(--space-2);">
+            <div class="uui-accordion-item active" onclick="toggleAccordion(this)">
+              <div class="uui-accordion-header">
+                <span>How long does it take to deliver a prototype?</span>
+                <svg class="uui-accordion-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </div>
+              <div class="uui-accordion-body">
+                Thanks to the AI Studio OS system, the first clickable interactive prototype is ready within 48 hours after brief approval.
+              </div>
+            </div>
+
+            <div class="uui-accordion-item" onclick="toggleAccordion(this)">
+              <div class="uui-accordion-header">
+                <span>Will our team be able to edit website content independently?</span>
+                <svg class="uui-accordion-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </div>
+              <div class="uui-accordion-body">
+                Yes. The site is developed following Webflow Client-First standards, giving you an intuitive visual CMS editor without any risk of breaking code.
+              </div>
+            </div>
+
+            <div class="uui-accordion-item" onclick="toggleAccordion(this)">
+              <div class="uui-accordion-header">
+                <span>What happens if we require design adjustments to the concept?</span>
+                <svg class="uui-accordion-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </div>
+              <div class="uui-accordion-body">
+                We operate via a rigorous milestone approval process. Every stage requires your sign-off before proceeding, with included revision hours.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8.2 Guarantee & Risk Reversal -->
+        <div class="uui-card">
+          <span class="uui-text-caption">8.2 GUARANTEES & RISK REVERSAL</span>
+          <div class="uui-grid-3" style="margin-top: var(--space-2);">
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-md); color: var(--color-text-primary); display:block; margin-bottom: var(--space-1);">100% SLA Delivery Guarantee</strong>
+              <p class="uui-text-caption">We refund 2% of the milestone fee for every single day of delay on our end.</p>
+            </div>
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-md); color: var(--color-text-primary); display:block; margin-bottom: var(--space-1);">Legally Binding SLA</strong>
+              <p class="uui-text-caption">Every milestone, warranty, and timeline commitment is backed by a formal contract.</p>
+            </div>
+            <div class="uui-card-subtle">
+              <strong style="font-size: var(--font-size-md); color: var(--color-text-primary); display:block; margin-bottom: var(--space-1);">Strict Confidentiality & NDA</strong>
+              <p class="uui-text-caption">Complete intellectual property transfer and comprehensive non-disclosure protection.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8.3 Team / Founders Grid -->
+        <div class="uui-card">
+          <span class="uui-text-caption">8.3 TEAM & EXPERT SPECIALISTS</span>
+          <div class="uui-grid-4" style="text-align:center; margin-top: var(--space-2);">
+            <div class="uui-card-subtle">
+              <div class="uui-avatar uui-avatar-xl" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text); margin:0 auto;">YO</div>
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block; margin-top: var(--space-2);">Yurii Oleskiv</strong>
+              <span class="uui-text-caption">Lead Architect & Founder</span>
+            </div>
+            <div class="uui-card-subtle">
+              <div class="uui-avatar uui-avatar-xl" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text); margin:0 auto;">AI</div>
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block; margin-top: var(--space-2);">AI Director Bot</strong>
+              <span class="uui-text-caption">Automation Systems</span>
+            </div>
+            <div class="uui-card-subtle">
+              <div class="uui-avatar uui-avatar-xl" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text); margin:0 auto;">UX</div>
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block; margin-top: var(--space-2);">UX Copywriter</strong>
+              <span class="uui-text-caption">Conversion Specialist</span>
+            </div>
+            <div class="uui-card-subtle">
+              <div class="uui-avatar uui-avatar-xl" style="background: var(--color-btn-primary-bg); color: var(--color-btn-primary-text); margin:0 auto;">QA</div>
+              <strong style="font-size: var(--font-size-sm); color: var(--color-text-primary); display:block; margin-top: var(--space-2);">QA Verification</strong>
+              <span class="uui-text-caption">Quality & Standards</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. FINAL CONVERSION (CTA, QUIZ & CALENDAR)
+         ======================================================================== -->
+    <section id="cat-conversion">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 09 / Conversion</span>
+        <h2 class="uui-section-title">Closing CTA, Interactive Quiz & Meeting Booking</h2>
+        <p class="uui-section-desc">High-contrast cards, multi-step interactive qualifying quiz, lead magnet opt-in, and calendar scheduling.</p>
+      </div>
+
+      <div class="uui-flex-col" style="gap: var(--space-8);">
+
+        <!-- 9.1 High-Impact Banner CTA (Theme-Safe) -->
+        <div class="uui-card-dark" style="text-align: center; padding: var(--space-12) var(--space-6);">
+          <span class="uui-text-caption" style="color: var(--color-surface-dark-subtle);">9.1 HIGH-IMPACT BANNER CTA</span>
+          <h2 class="uui-heading-display" style="color: var(--color-surface-dark-text); max-width: 800px; margin: var(--space-4) auto;">
+            Ready to Double Your Website's Conversion Rate?
+          </h2>
+          <p class="uui-text-lead" style="color: var(--color-surface-dark-subtle); max-width: 600px; margin: 0 auto var(--space-6);">
+            Book a 20-minute strategic architecture session with our lead UX director.
+          </p>
+          <div class="uui-flex-row" style="justify-content: center;">
+            <button class="uui-btn uui-btn-primary uui-btn-xl">
+              Book Free Architecture Review →
+            </button>
+          </div>
+        </div>
+
+        <!-- 9.2 Multi-Step Quiz Form -->
+        <div class="uui-card">
+          <span class="uui-text-caption">9.2 MULTI-STEP QUALIFYING QUIZ</span>
+          <div class="uui-card-subtle" style="max-width: 680px; margin: var(--space-3) auto; width:100%;">
+            <div id="quizStep1">
+              <h4 class="uui-heading-h5">Step 1/2: What is the primary objective of your website?</h4>
+              <div class="uui-flex-col" style="gap: var(--space-2); margin: var(--space-4) 0;">
+                <label class="uui-selection-card selected" onclick="selectCard(this)"><input type="radio" name="quizQ1" class="uui-radio" checked> <span>Generate high-ticket B2B leads and discovery calls</span></label>
+                <label class="uui-selection-card" onclick="selectCard(this)"><input type="radio" name="quizQ1" class="uui-radio"> <span>Present SaaS product & secure venture capital</span></label>
+                <label class="uui-selection-card" onclick="selectCard(this)"><input type="radio" name="quizQ1" class="uui-radio"> <span>Direct online sales & digital checkouts</span></label>
+              </div>
+              <button class="uui-btn uui-btn-primary uui-btn-md" onclick="document.getElementById('quizStep1').style.display='none'; document.getElementById('quizStep2').style.display='block';">Continue (Step 2) →</button>
+            </div>
+
+            <div id="quizStep2" style="display:none;">
+              <h4 class="uui-heading-h5">Step 2/2: Where should we send your custom blueprint?</h4>
+              <div class="uui-flex-col" style="gap: var(--space-3); margin: var(--space-4) 0;">
+                <input type="text" class="uui-input" placeholder="Your name">
+                <input type="tel" class="uui-input" placeholder="Phone or Telegram handle">
+              </div>
+              <div class="uui-flex-row">
+                <button class="uui-btn uui-btn-secondary uui-btn-md" onclick="document.getElementById('quizStep2').style.display='none'; document.getElementById('quizStep1').style.display='block';">← Back</button>
+                <button class="uui-btn uui-btn-primary uui-btn-md" onclick="alert('Thank you! Your roadmap has been sent.')">Get Custom Sitemap</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9.3 Lead Magnet / Resource Download -->
+        <div class="uui-card">
+          <span class="uui-text-caption">9.3 LEAD MAGNET (CHECKLIST DOWNLOAD FOR EMAIL)</span>
+          <div class="uui-grid-2" style="align-items:center;">
+            <div class="uui-flex-col" style="gap: var(--space-2);">
+              <h4 class="uui-heading-h4">Checklist: 25 Must-Have Sections for a High-Converting Website</h4>
+              <p class="uui-text-caption">Complete PDF blueprint on landing page architecture based on Untitled UI standards.</p>
+            </div>
+            <div class="uui-input-group-addon">
+              <input type="email" class="uui-input" placeholder="Enter your business email">
+              <button class="uui-btn uui-btn-primary uui-btn-md" style="border-radius: 0 var(--uui-radius-lg) var(--uui-radius-lg) 0;">Download PDF Guide</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9.4 Booking / Calendar Embed Mockup -->
+        <div class="uui-card">
+          <span class="uui-text-caption">9.4 EMBEDDED MEETING SCHEDULER (CALENDLY EMBED)</span>
+          <div class="uui-mockup-screen" style="text-align:center; padding: var(--space-8);">
+            <h4 class="uui-heading-h5">Select a convenient time for an introductory Zoom sync</h4>
+            <div class="uui-flex-row" style="justify-content:center; gap: var(--space-2); margin-top: var(--space-4);">
+              <button class="uui-btn uui-btn-secondary uui-btn-sm">Mon, 10:00 AM</button>
+              <button class="uui-btn uui-btn-primary uui-btn-sm">Tue, 02:30 PM</button>
+              <button class="uui-btn uui-btn-secondary uui-btn-sm">Wed, 04:00 PM</button>
+              <button class="uui-btn uui-btn-secondary uui-btn-sm">Thu, 11:15 AM</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. NAVIGATION & FOOTER (2 BLOCKS)
+         ======================================================================== -->
+    <section id="cat-navigation">
+      <div class="uui-section-header">
+        <span class="uui-section-tag">Category 10 / Navigation</span>
+        <h2 class="uui-section-title">Navigation Header & Comprehensive Footer</h2>
+        <p class="uui-section-desc">Full sitemap navigation, legal compliance disclosures, and sticky navigation bar.</p>
+      </div>
+
+      <!-- Sticky Navbar Preview -->
+      <nav class="uui-navbar">
+        <div class="uui-brand-group">
+          <a href="#" class="uui-logo">
+            <div class="uui-logo-icon">BW</div>
+            <span>Bright Web Studio</span>
+          </a>
+          <div class="uui-nav-links">
+            <a href="#cat-hero" class="uui-nav-link active">Hero</a>
+            <a href="#cat-features" class="uui-nav-link">Features</a>
+            <a href="#cat-pricing" class="uui-nav-link">Pricing</a>
+            <a href="#cat-portfolio" class="uui-nav-link">Portfolio</a>
+            <a href="#cat-objections" class="uui-nav-link">FAQ</a>
+          </div>
+        </div>
+        <button class="uui-btn uui-btn-primary uui-btn-sm">Get Started</button>
+      </nav>
+
+      <!-- Seamless Comprehensive 4-Column Footer -->
+      <footer class="uui-footer-full">
+        <div class="uui-footer-grid">
+          <div class="uui-footer-brand-col">
+            <a href="#" class="uui-logo">
+              <div class="uui-logo-icon">BW</div>
+              <span>Bright Web AI Studio</span>
+            </a>
+            <p class="uui-text-subtle">
+              Leading design engineering studio specializing in automated Webflow production on Untitled UI.
+            </p>
+            <span class="uui-text-caption">© 2026 Bright Web Studio. All rights reserved.</span>
+          </div>
+
+          <div>
+            <h4 class="uui-footer-heading">Products & Frameworks</h4>
+            <ul class="uui-footer-links-list">
+              <li><a href="#" class="uui-footer-link">AI Studio OS v3.9</a></li>
+              <li><a href="#" class="uui-footer-link">Untitled UI Design System</a></li>
+              <li><a href="#" class="uui-footer-link">Webflow Framework</a></li>
+              <li><a href="#" class="uui-footer-link">Component Library</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="uui-footer-heading">Company & Standards</h4>
+            <ul class="uui-footer-links-list">
+              <li><a href="#" class="uui-footer-link">About Studio</a></li>
+              <li><a href="#" class="uui-footer-link">Production Guidelines</a></li>
+              <li><a href="#" class="uui-footer-link">Anti-AI Slop Standards</a></li>
+              <li><a href="#" class="uui-footer-link">Cases & Testimonials</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="uui-footer-heading">Contact & Support</h4>
+            <ul class="uui-footer-links-list">
+              <li><a href="#" class="uui-footer-link">Telegram: @brightweb_studio</a></li>
+              <li><a href="#" class="uui-footer-link">Email: hello@brightweb.studio</a></li>
+              <li><a href="#" class="uui-footer-link">Hours: Mon-Fri 09:00 - 19:00 CET</a></li>
+              <li><a href="#" class="uui-footer-link">Kyiv, Ukraine</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="uui-footer-bottom">
+          <span>Bright Web Studio OS • Untitled UI Pure Monochrome Edition v3.9</span>
+          <div style="display:flex; gap: var(--space-4); flex-wrap:wrap;">
+            <a href="#" class="uui-footer-link" style="font-size: var(--font-size-xs);">Terms of Service</a>
+            <a href="#" class="uui-footer-link" style="font-size: var(--font-size-xs);">Privacy Policy</a>
+            <a href="#" class="uui-footer-link" style="font-size: var(--font-size-xs);">Sitemap</a>
+          </div>
+        </div>
+      </footer>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       INTERACTIVE JAVASCRIPT CONTROLLERS
+       ======================================================================== -->
+  <script>
+    // Theme Switcher
+    let currentTheme = 'light';
+    function toggleTheme() {
+      const html = document.documentElement;
+      const sunIcon = document.getElementById('themeIconSun');
+      const moonIcon = document.getElementById('themeIconMoon');
+      if (currentTheme === 'light') {
+        html.setAttribute('data-theme', 'dark');
+        currentTheme = 'dark';
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        currentTheme = 'light';
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      }
+    }
+
+    // Viewport Mode Switcher (Desktop / Mobile 390px)
+    function setViewMode(mode) {
+      const body = document.body;
+      const deskBtn = document.getElementById('viewDesktopBtn');
+      const mobBtn = document.getElementById('viewMobileBtn');
+      if (mode === 'mobile') {
+        body.classList.add('view-mobile');
+        mobBtn.classList.add('active');
+        deskBtn.classList.remove('active');
+      } else {
+        body.classList.remove('view-mobile');
+        deskBtn.classList.add('active');
+        mobBtn.classList.remove('active');
+      }
+    }
+
+    // Selection Card Switcher
+    function selectCard(element) {
+      const parent = element.parentElement;
+      const cards = parent.querySelectorAll('.uui-selection-card');
+      cards.forEach(c => c.classList.remove('selected'));
+      element.classList.add('selected');
+      const radio = element.querySelector('input[type="radio"]');
+      if (radio) radio.checked = true;
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(element) {
+      element.classList.toggle('active');
+    }
+
+    // Tabs Switcher
+    function switchTab(index) {
+      const tabs = document.querySelectorAll('.uui-tab-pill-btn');
+      tabs.forEach((t, i) => {
+        if (i === index) t.classList.add('active');
+        else t.classList.remove('active');
+      });
+      document.getElementById('tabContent0').style.display = index === 0 ? 'block' : 'none';
+      document.getElementById('tabContent1').style.display = index === 1 ? 'block' : 'none';
+      document.getElementById('tabContent2').style.display = index === 2 ? 'block' : 'none';
+    }
+
+    // Billing Switcher (Monthly vs Annual)
+    function setBilling(type) {
+      const btnM = document.getElementById('btnMonthly');
+      const btnA = document.getElementById('btnAnnual');
+      const pS = document.getElementById('priceStarter');
+      const pG = document.getElementById('priceGrowth');
+      const pE = document.getElementById('priceEnterprise');
+      if (type === 'monthly') {
+        btnM.classList.add('active');
+        btnM.style.background = 'var(--color-bg-subtle)';
+        btnM.style.fontWeight = '700';
+        btnA.classList.remove('active');
+        btnA.style.background = 'transparent';
+        btnA.style.fontWeight = '500';
+        pS.innerText = ',500';
+        pG.innerText = ',500';
+        pE.innerText = ',800';
+      } else {
+        btnA.classList.add('active');
+        btnA.style.background = 'var(--color-bg-subtle)';
+        btnA.style.fontWeight = '700';
+        btnM.classList.remove('active');
+        btnM.style.background = 'transparent';
+        btnM.style.fontWeight = '500';
+        pS.innerText = ',200';
+        pG.innerText = ',800';
+        pE.innerText = ',500';
+      }
+    }
+  </script>
+</body>
+</html>
